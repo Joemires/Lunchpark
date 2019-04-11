@@ -1,0 +1,109 @@
+#carousel .search-icon {
+    text-align: center;
+    position: absolute;
+    bottom: -60px;
+    padding: 20px;
+    z-index: 2;
+    /* display: flex; */
+    width: 100%;
+    background-color: #f6f6f6c0
+}
+.search-icon .outer-circle {
+    position: relative;
+    background-color: #E46653;
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 50%;
+}
+.search-icon span.fa {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 35px;
+    border: 5px solid gray;
+    color: gray
+}
+.search-icon span.far {
+    position: relative;
+    background-color: white;
+    padding: 15px;
+    font-size: 36px;
+    cursor: pointer;
+    border-radius: 50%
+}
+.full-container {
+    /* display: none; */
+}
+.mobile-search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /* top: 0; */
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+}
+.search-close {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.search-close > .fa {
+    font-size: 28px;
+    background-color: #E46653;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+}
+.mobile-search form {
+    position: relative;
+    margin-top: 80px;
+    padding: 5px 25px;
+}
+.form-group {
+    position: relative;
+}
+.mobile-search .form-group span.fa {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    text-align: center;
+    /* background-color: red; */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mobile-search input.form-control {
+    padding: 10px;
+    padding-left: 42px;
+    border-radius: 0;
+    outline: none;
+}
+.mobile-search input.form-control:focus {
+    border-color: #E46653;
+    box-shadow: none;
+}
+.mobile-search input.form-control:focus + span {
+    color: #E46653
+}
+@media (min-width: 425px) {
+    #carousel .search-icon {
+        display: none;
+    }
+}
+@media (max-width: 425px) {
+    #carousel .search-icon {
+        display: block;
+        /* background-color: red; */
+    }
+    #carousel .search-box {
+        display: none;
+        /* background-color: red; */
+    }
+
+}

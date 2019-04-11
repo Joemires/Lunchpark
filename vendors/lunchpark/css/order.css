@@ -1,0 +1,257 @@
+.showcase {
+    position: relative;
+    height: auto;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: zoom-in;
+    margin-bottom: 12px;
+    opacity: 1s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6)
+}
+/*.showcase::before,*/ .nav div::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-135deg, rgba(255, 106, 92, .4), rgba(5, 101, 113, .4))
+}
+.showcase > img {
+    width: 100%;
+}
+.showcase > span {
+    position: absolute;
+    z-index: 2;
+    font-size: 65px;
+    right: 1%;
+    top: 4%;
+    color: #056571;
+    display: block;
+    /* font-weight: 800; */
+}
+.showcase > span i {
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    font-weight: 800;
+    font-style: normal
+} 
+.menu-section .nav, .button-box {
+    display: flex;
+    webkit-flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.menu-section .nav div {
+    position: relative;
+    cursor: pointer;
+    /* height: 80px; */
+    width: 22.5%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.menu-section .nav div:hover::before, .menu-section .nav div:hover, .menu-section .nav div.active:hover::before {
+    background: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6)
+}
+.menu-section .nav div.active:before {
+    background: linear-gradient(-135deg, rgba(255, 106, 92, 1), rgba(5, 101, 113, 1))
+}
+.menu-section .nav img {
+    width: 100%;
+}
+.menu-section .desc-box h4 {
+    font-size: 28px;
+    letter-spacing: .08em
+}
+.menu-section .desc-box small {
+    display: block;
+    letter-spacing: .06em;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    text-transform: lowercase;
+    margin-top: 2px
+}
+.star-rate {
+    /* padding: 10px; */
+    letter-spacing: .1em;
+    margin: 15px 0 10px 0;
+    color: #FF6A5C
+}
+.star-rate span {
+    margin-left: 10px;
+    color: black;
+    letter-spacing: .15em
+}
+.menu-section .desc-box p {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.06em;
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.75)
+}
+.button-box > span {
+    padding: 10px 20px;
+    line-height: 1.42857;
+    letter-spacing: .05em;
+    border: 2px solid #adadad;
+    cursor: pointer;
+    border-radius: 10px
+}
+.button-box > span:last-child {
+    word-spacing: .25em
+}
+.button-box i {
+    margin-left: 5px;
+}
+
+.action-box .btn {
+    margin-left: 10px;
+    font-weight: 600
+}
+.action-box i {
+    margin-right: 10px;
+}
+.eatery-section .nav {
+    position: relative;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    list-style-type: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: white;
+    display: inline-block
+}
+.eatery-section .nav li {
+    display: inline-block;
+    padding: 3px 0px;
+    margin: 3px 5px;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6)
+}
+.eatery-section li.active {
+    color: #FF6A5C;
+}
+.eatery-section li.active::after {
+    content: '';
+    width: 90%;
+    height: 2px;
+    margin: 2px 0 0 5%;
+    display: block;
+    background-color: rgba(255, 106, 92, 0.705);
+    border-radius: 5px
+}
+.overlay {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.08);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 0;
+}
+.section-container {
+    width: 100%;
+    color: black
+}
+[data-secName=details] h6 {
+    /* background-color: red; */
+    font-size: 28px;
+    margin: 10px 0 15px 0;
+    letter-spacing: .1em
+}
+[data-secName=details] small {
+    display: block;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6)
+}
+[data-secName=details] img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+[data-secName=details] p {
+    font-size: 16px;
+    letter-spacing: .05em
+}
+[data-secName=details] .star-rate i {
+    font-size: 25px;
+    letter-spacing: .25em
+}
+[data-secName=details] .star-rate p {
+    margin-top: 6px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #eee;
+}
+.rate-stats {
+    padding-top: 15px;
+    line-height: 18px;
+    letter-spacing: .05em;
+    color: black
+}
+.rate-stats div.row {
+    margin-bottom: 10px
+}
+.stat-box {
+    height: 20px;
+    padding: 0;
+    background-color: #f6f6f6
+}
+.stat-box div {
+    height: 100%;
+}
+.stat-box .bg-success {
+    width: 65%;
+}
+.stat-box .bg-info {
+    width: 50%;
+}
+.stat-box .bg-primary {
+    width: 80%;
+}
+.stat-box .bg-secondary {
+    width: 35%;
+}
+.stat-box .bg-danger {
+    width: 5%;
+}
+
+[data-secName=reviews] > div {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+[data-secName=reviews] img {
+    width: 100%;
+    border-radius: 5px
+}
+[data-secName=reviews] h6 {
+    flex: 1;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    /* background-color: green */
+}
+[data-secName=reviews] .d-flex {
+    margin: 10px 0 15px 0;
+}
+[data-secName=reviews] .d-flex span {
+    text-align: right;
+    flex: 1;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FF6A5C;
+}
+[data-secName=reviews] p {
+    letter-spacing: 0.03em;
+    line-height: 20px;
+    margin: 0px;
+    font-family: 'karla', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: lighter;
+    font-size: 15px;
+}

@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Rewrite for making file.php display as file
+# RewriteRule ^file file.php [NC,L]
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will match 
+
+# Rewite to make /dir/foo.php display as /dir/foo
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Rewrite to externally redirect /dir/foo.php to /dir/foo
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R,L]
+
+# Rewrite for user.php?u=xxxxx
+RewriteRule ^user/([0-9a-zA-Z]+) user.php?u=$1 [NC,L]
+
+# Rewrite for making support.php display as service/support
+RewriteRule ^service/support support.php [NC,L]
